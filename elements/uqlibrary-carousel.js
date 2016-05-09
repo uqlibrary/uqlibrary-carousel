@@ -178,6 +178,7 @@
           self._preloadSlide();
         };
       } else {
+        this.$.heightHackImage.style.height = 'auto';
         this.fire('uqlibrary-carousel-loaded');
       }
     },
