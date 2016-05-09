@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>uqlibrary-carousel</title>
+
+    <script src="../../webcomponentsjs/webcomponents.min.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+    <link rel="import" href="../../test-fixture/test-fixture.html">
+    <script src="../../uq-wait/UQWait.js"></script>
+
+    <!-- Import the element to test -->
+    <link rel="import" href="../elements/uqlibrary-carousel.html">
+
+</head>
+<body>
+
+<test-fixture id="element">
+    <template>
+        <uqlibrary-carousel auto-play="false" selected-slide="1" slide-duration="2000" transition-duration="500" height-ratio="2.66"></uqlibrary-carousel>
+    </template>
+</test-fixture>
+
+<script>
+    var slides = [
+        {
+            link: "http://www.uq.edu.au/",
+            image: {
+                href: "http://lorempixel.com/800/300/abstract",
+                description: "Test image"
+            }
+        },
+        {
+            link: "http://www.google.com/",
+            image: {
+                href: "http://lorempixel.com/g/800/300/city"
+            }
+        }
+        ,
+        {
+            link: "http://www.youtube.com",
+            image: {
+                href: "http://lorempixel.com/800/300/people"
+            }
+        },
+        {
+            link: "http://www.wisgerhof.io",
+            image: {
+                href: "http://lorempixel.com/g/800/300/nightlife"
+            }
+        },
+        {
+            link: "http://www.test.com",
+            image: {
+                href: "http://lorempixel.com/800/300/food"
+            }
+        }
+    ];
+
+    suite('<uqlibrary-carousel> tests', function () {
+        var element;
+
+        setup(function () {
+            document.cookie="UQLMockData=enabled";
+
+            element = fixture('element');
+        });
+
+
+        test('It should load data', function (done) {
+            element.addEventListener('uqlibrary-carousel-loaded', function () {
+                expect(element.slides.length).to.be.equal(5);
+                expect(element.selectedSlide).to.be.equal(1);
+
+                done();
+            });
+
+            element.slides = slides;
+        });
+    });
+</script>
+
+</body>
+</html>
