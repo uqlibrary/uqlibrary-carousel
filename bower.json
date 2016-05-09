@@ -26,5 +26,8 @@
     "neon-elements": "PolymerElements/neon-elements#^1.0.0",
     "uqlibrary-styles": "uqlibrary/uqlibrary-styles#^1.0.0",
     "uq-wait": "uqlibrary/uq-wait#^1.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^0.7.20"
   }
 }
