@@ -88,7 +88,6 @@
         this._startAutoPlay();
       }
 
-      this.fire("uqlibrary-carousel-slide-changed", { slideNumber: newSlide });
       this.$.slider.selectIndex(newSlide);
     },
     /**
@@ -188,6 +187,7 @@
      * @private
      */
     _navDotClicked: function (e) {
+      this.fire("uqlibrary-carousel-slide-changed", { slideNumber: e.model.item.index + 1 });
       this._transitionToSlide(e.model.item.index);
     },
     /**
