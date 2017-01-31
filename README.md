@@ -1,5 +1,8 @@
 # uqlibrary-carousel
 
+[![Dependency Status](https://david-dm.org/uqlibrary/uqlibrary-carousel.svg)](https://david-dm.org/uqlibrary/uqlibrary-carousel)
+[![Dev Dependency Status](https://david-dm.org/uqlibrary/uqlibrary-carousel/dev-status.svg)](https://david-dm.org/uqlibrary/uqlibrary-carousel?type=dev)
+
 A simple, responsive, image slider (carousel) built and designed for Polymer. Only dependencies are Polymer elements.
 
 ## Demo
