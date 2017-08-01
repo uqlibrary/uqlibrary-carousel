@@ -37,3 +37,19 @@ For a full list of options see [GH Pages](http://uqlibrary.github.io/uqlibrary-c
 - Chrome ~
 - Firefox ~
 - Safari ~
+
+## Dev Notes
+
+2/8/2017
+
+running `wct` is producing 'The web-component-tester Bower package is not installed as a dependency of this project (uqlibrary-carousel).'
+
+so per https://github.com/Polymer/web-component-tester/issues/488
+
+I added
+
+`ln -s ../ bower_components`
+
+to the codeship process
+
+This will be required to run `wct` locally too
