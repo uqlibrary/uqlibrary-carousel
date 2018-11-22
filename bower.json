@@ -1,5 +1,6 @@
 {
   "name": "uqlibrary-carousel",
+  "version": "1.0.4",
   "authors": [
     "Jan-Willem Wisgerhof <jwwisgerhof@gmail.com>"
   ],
@@ -15,22 +16,15 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "web-component-tester": "^6.0.0",
-    "test-fixture": "Polymer/test-fixture#*"
-  },
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4",
     "iron-elements": "PolymerElements/iron-elements#^1.0.10",
     "paper-elements": "PolymerElements/paper-elements#^1.0.7",
     "neon-elements": "PolymerElements/neon-elements#^1.0.0",
-    "uqlibrary-styles": "uqlibrary/uqlibrary-styles#^1.0.0",
+    "uqlibrary-styles": "uqlibrary/uqlibrary-styles",
     "uq-wait": "uqlibrary/uq-wait#^1.0.0"
   },
-  "resolutions": {
-    "webcomponentsjs": "^0.7.20",
-    "web-component-tester": "^6.0.0",
-    "mocha": "^3.1.2",
-    "test-fixture": "^3.0.0-rc.1"
+  "devDependencies": {
+    "web-component-tester": "*"
   }
 }
